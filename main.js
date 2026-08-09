@@ -12,4 +12,4 @@ function tick(){const now=new Date();document.querySelector('#clock').textConten
 translations.en.navMarket='Research';translations.en.navMethod='Strategies';translations.en.navStudio='Studio';translations['zh-CN'].navMarket='量化研究';translations['zh-CN'].navMethod='策略体系';translations['zh-CN'].navStudio='理念与团队';translations['zh-TW'].navMarket='量化研究';translations['zh-TW'].navMethod='策略體系';translations['zh-TW'].navStudio='理念與團隊';
 setLanguage(localStorage.getItem('aura-lang')||'en');tick();setInterval(tick,2500);
 const atlasNav=document.querySelector('.navlinks');if(atlasNav&&!atlasNav.querySelector('[href="archive.html"]'))atlasNav.insertAdjacentHTML('beforeend','<a href="archive.html">Atlas</a>');
-if(!document.querySelector('link[rel="icon"]')){const auraIcon=document.createElement('link');auraIcon.rel='icon';auraIcon.type='image/svg+xml';auraIcon.href='public/brand/aura-mark.svg';document.head.appendChild(auraIcon)}
+if(!document.querySelector('link[rel="icon"]')){const auraIcon=document.createElement('link');auraIcon.rel='icon';auraIcon.type='image/png';auraIcon.href='public/brand/aura-scene-mark-64.png';document.head.appendChild(auraIcon)}

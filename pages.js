@@ -6,4 +6,4 @@ function applyPageLanguage(lang){const d=pageCopy[lang]||pageCopy.en;document.do
 document.querySelector('.lang-switcher').addEventListener('click',e=>{if(e.target.dataset.lang)applyPageLanguage(e.target.dataset.lang)});applyPageLanguage(localStorage.getItem('aura-lang')||'en');
 const atlasNav=document.querySelector('.navlinks');if(atlasNav&&!atlasNav.querySelector('[href="archive.html"]'))atlasNav.insertAdjacentHTML('beforeend','<a href="archive.html">Atlas</a>');
 if(!document.querySelector('script[src="localization-extra.js"]')){const extraScript=document.createElement('script');extraScript.src='localization-extra.js';document.head.appendChild(extraScript)}
-if(!document.querySelector('link[rel="icon"]')){const auraIcon=document.createElement('link');auraIcon.rel='icon';auraIcon.type='image/svg+xml';auraIcon.href='public/brand/aura-mark.svg';document.head.appendChild(auraIcon)}
+if(!document.querySelector('link[rel="icon"]')){const auraIcon=document.createElement('link');auraIcon.rel='icon';auraIcon.type='image/png';auraIcon.href='public/brand/aura-scene-mark-64.png';document.head.appendChild(auraIcon)}
