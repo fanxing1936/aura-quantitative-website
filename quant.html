@@ -17,7 +17,7 @@
 
   <main>
     <header class="quant-hero">
-      <img class="quant-hero-art" src="public/art/quant-lab/market-horizon.webp" alt="Classical panoramic market horizon">
+      <img class="quant-hero-art" src="public/art/quant-lab/market-horizon-distilled.png" alt="Distilled classical market horizon illustration">
       <div class="quant-hero-copy">
         <p class="eyebrow" data-quant="heroEyebrow">Systema / live research folio</p>
         <h1 data-quant-html="heroTitle">Numbers move.<br><em>Theory gives them form.</em></h1>
@@ -26,7 +26,7 @@
       <div class="quant-status"><span><i></i><b data-quant="status">Model stream active</b></span><span id="lab-time">UTC+8 / 00:00:00</span><span data-quant="delay">Illustrative delayed data</span></div>
     </header>
 
-    <section class="quote-ribbon" aria-label="Illustrative stock movement">
+    <section class="quote-ribbon" aria-label="Illustrative stock movement" hidden>
       <div data-symbol="AAPL"><span>AAPL</span><strong>226.41</strong><i>+0.82%</i></div>
       <div data-symbol="MSFT"><span>MSFT</span><strong>424.73</strong><i>+0.46%</i></div>
       <div data-symbol="NVDA"><span>NVDA</span><strong>188.92</strong><i>+1.31%</i></div>
@@ -35,21 +35,31 @@
       <div data-symbol="VIX"><span>VIX</span><strong>17.24</strong><i>−1.08%</i></div>
     </section>
 
+    <section class="quote-ribbon live-ribbon" aria-label="Live market ticker">
+      <div class="tradingview-widget-container"><div class="tradingview-widget-container__widget"></div><script type="text/javascript" src="https://s3.tradingview.com/external-embedding/embed-widget-ticker-tape.js" async>{"symbols":[{"proName":"NASDAQ:NVDA","title":"NVIDIA"},{"proName":"NASDAQ:SPCX","title":"SpaceX"},{"proName":"NASDAQ:TSLA","title":"Tesla"},{"proName":"NASDAQ:RKLB","title":"Rocket Lab"},{"proName":"NASDAQ:ASTS","title":"AST SpaceMobile"},{"proName":"NASDAQ:MSFT","title":"Microsoft"}],"showSymbolLogo":false,"isTransparent":true,"displayMode":"adaptive","colorTheme":"dark","locale":"en"}</script></div>
+    </section>
+
     <section class="quant-observatory section-pad">
       <div class="quant-section-head"><div><p class="eyebrow dark" data-quant="observeEyebrow">I / Market observatory</p><h2 data-quant-html="observeTitle">Price is a path,<br><em>not a point.</em></h2></div><p data-quant="observeBody">We read return, dispersion and liquidity together. The aim is not to predict every movement, but to distinguish structure from accident.</p></div>
       <div class="quant-grid">
-        <article class="quant-card price-path">
+        <article class="quant-card price-path legacy-market-card" hidden>
           <header><span data-quant="pathTitle">Normalized equity path</span><b>+18.42%</b></header>
           <svg viewBox="0 0 720 260" role="img" aria-label="Illustrative normalized equity curve"><g class="grid-lines"><path d="M0 35H720M0 95H720M0 155H720M0 215H720"/></g><path class="area-path" d="M0 220L45 202L92 211L138 170L185 182L232 142L278 157L326 109L372 126L420 82L468 105L514 57L560 72L612 31L660 51L720 18V260H0Z"/><path class="main-path" d="M0 220L45 202L92 211L138 170L185 182L232 142L278 157L326 109L372 126L420 82L468 105L514 57L560 72L612 31L660 51L720 18"/></svg>
           <footer><span data-quant="return">Annualized return <b>18.42%</b></span><span data-quant="drawdown">Max drawdown <b>−6.20%</b></span><span data-quant="sharpe">Sharpe <b>1.84</b></span></footer>
         </article>
+        <article class="quant-card price-path live-market-card">
+          <header><span data-quant="pathTitle">Public market pulse</span><b class="live-badge" data-quant="liveFeed">LIVE / DELAYED BY EXCHANGE</b></header>
+          <div class="tradingview-widget-container market-overview"><div class="tradingview-widget-container__widget"></div><script type="text/javascript" src="https://s3.tradingview.com/external-embedding/embed-widget-symbol-overview.js" async>{"symbols":[["NVIDIA","NASDAQ:NVDA|1D"],["SpaceX","NASDAQ:SPCX|1D"],["Tesla","NASDAQ:TSLA|1D"],["Rocket Lab","NASDAQ:RKLB|1D"],["AST SpaceMobile","NASDAQ:ASTS|1D"]],"chartOnly":false,"width":"100%","height":"430","locale":"en","colorTheme":"light","autosize":true,"showVolume":true,"showMA":false,"hideDateRanges":false,"hideMarketStatus":false,"hideSymbolLogo":true,"scalePosition":"right","scaleMode":"Normal","fontFamily":"Georgia, serif","fontSize":"10","noTimeScale":false,"valuesTracking":"1","changeMode":"price-and-percent","chartType":"area","maLineColor":"#466c81","maLineWidth":1,"lineWidth":2,"lineType":0,"dateRanges":["1d|1","1m|30","3m|60","12m|1D","60m|1W","all|1M"]}</script></div>
+          <footer class="market-source"><span data-quant="marketSource">Market feed by TradingView</span><span><b>NVDA · SPCX · TSLA · RKLB · ASTS</b></span></footer>
+        </article>
         <article class="quant-card volatility-card"><header><span data-quant="volTitle">Volatility cone</span><b>9.76%</b></header><div class="vol-cone"><i style="--x:34%;--y:78%"></i><i style="--x:47%;--y:62%"></i><i style="--x:61%;--y:49%"></i><i style="--x:74%;--y:34%"></i><span>10D</span><span>30D</span><span>60D</span><span>120D</span></div><p data-quant="volBody">Realized volatility remains below its long-run median while breadth expands.</p></article>
-        <figure class="quant-plate observer-plate"><img src="public/art/quant-lab/lakeside-observers.webp" alt="Two classical observers beside a lake"><figcaption data-quant="plateObserve">Plate 01 / Observation before action</figcaption></figure>
+        <aside class="space-x-note"><span>PUBLIC MARKET / 01</span><strong>SPCX</strong><p data-quant="spaceXNote">SpaceX Class A shares began trading on Nasdaq in June 2026. This panel follows SPCX beside listed aerospace peers for sector context.</p></aside>
+        <figure class="quant-plate observer-plate"><img src="public/art/quant-lab/lakeside-observers-gathered.png" alt="Gathered-scenes collage of two observers beside a lake"><figcaption data-quant="plateObserve">Plate 01 / Observation before action</figcaption></figure>
       </div>
     </section>
 
     <section class="model-workshop section-pad">
-      <img class="workshop-bg" src="public/art/quant-lab/mountain-village.webp" alt="Mountain village and stone bridge">
+      <img class="workshop-bg" src="public/art/quant-lab/mountain-village-gathered.png" alt="Gathered-scenes mountain village and stone bridge">
       <div class="quant-section-head"><div><p class="eyebrow dark" data-quant="modelEyebrow">II / Model workshop</p><h2 data-quant-html="modelTitle">Assumptions enter.<br><em>Evidence returns.</em></h2></div><p data-quant="modelBody">Every model is a compact argument about the market. We expose its inputs, uncertainty and failure conditions.</p></div>
       <div class="model-columns">
         <article class="formula-card"><small>01 / OPTION THEORY</small><h3 data-quant="bsTitle">Black–Scholes call value</h3><code>C = S₀N(d₁) − Ke<sup>−rT</sup>N(d₂)</code><div class="input-ledger"><span>S₀ <b>100.00</b></span><span>K <b>105.00</b></span><span>σ <b>22.0%</b></span><span>T <b>0.50</b></span></div><output><span data-quant="modelValue">Model value</span><strong id="bs-value">5.18</strong></output></article>
@@ -64,7 +74,7 @@
         <div><span data-quant="momentum">Momentum</span><i><b style="width:82%"></b></i><strong>+.82</strong></div><div><span data-quant="quality">Quality</span><i><b style="width:61%"></b></i><strong>+.61</strong></div><div><span data-quant="value">Value</span><i><b style="width:34%"></b></i><strong>+.34</strong></div><div class="negative"><span data-quant="volatility">Volatility</span><i><b style="width:23%"></b></i><strong>−.23</strong></div><div><span data-quant="liquidity">Liquidity</span><i><b style="width:49%"></b></i><strong>+.49</strong></div>
       </div>
       <div class="correlation-table"><header><span data-quant="corrTitle">Cross-asset correlation</span><small>90D</small></header><div class="corr-head"><span></span><span>EQ</span><span>FI</span><span>FX</span><span>CM</span></div><div><b>EQ</b><i data-v="100">1.00</i><i data-v="42">.42</i><i data-v="18">.18</i><i data-v="31">.31</i></div><div><b>FI</b><i data-v="42">.42</i><i data-v="100">1.00</i><i data-v="27">.27</i><i data-v="12">.12</i></div><div><b>FX</b><i data-v="18">.18</i><i data-v="27">.27</i><i data-v="100">1.00</i><i data-v="36">.36</i></div><div><b>CM</b><i data-v="31">.31</i><i data-v="12">.12</i><i data-v="36">.36</i><i data-v="100">1.00</i></div></div>
-      <figure class="quant-plate cliff-plate"><img src="public/art/quant-lab/cliff-house.webp" alt="Classical house on a cliff"><figcaption data-quant="plateRisk">Plate 02 / Risk at the boundary</figcaption></figure>
+      <figure class="quant-plate cliff-plate"><img src="public/art/quant-lab/cliff-house-distilled.png" alt="Distilled cliff house risk illustration"><figcaption data-quant="plateRisk">Plate 02 / Risk at the boundary</figcaption></figure>
     </section>
 
     <section class="quant-disclaimer"><span>AURA / LABORATORIUM</span><p data-quant="disclaimer">All market figures and calculations are illustrative, delayed and provided for interface demonstration only. They do not constitute investment advice.</p><a href="research.html" data-quant="researchLink">Read the research discipline ↗</a></section>
