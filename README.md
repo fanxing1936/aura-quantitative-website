@@ -11,7 +11,7 @@
 - 模拟实时市场行情、模型置信度与风险收益展示
 - 完整模型总账：收益、波动率、换手率、因子暴露与风险预算
 - 响应式桌面端、平板端和移动端布局
-- 多页面信息架构：研究、策略、团队理念、视觉图谱与联系页面
+- 多页面信息架构：研究、策略、量化实验室、团队理念、视觉图谱与联系页面
 - Scene Distillation / Gathered Scenes Zine 风格的古典艺术素材
 - 本地打开即可使用，也可部署到 GitHub Pages 或任意静态托管平台
 
@@ -22,6 +22,7 @@
 | 首页 | `index.html` | 品牌主张、市场数据、模型总账、研究方法与联系入口 |
 | 量化研究 | `research.html` | 数据体系、模型研究与风险科学 |
 | 策略体系 | `strategies.html` | 趋势动量、相对价值与动态配置 |
+| 量化实验室 | `quant.html` | 动态行情、收益路径、波动率、因子模型、相关矩阵与理论计算 |
 | 理念与团队 | `studio.html` | 古典技艺与现代计算的品牌理念 |
 | 视觉图谱 | `archive.html` | 结构、周期、迁徙与尺度四个视觉主题 |
 | 联系 | `contact.html` | 机构合作与研究交流入口 |
@@ -41,6 +42,7 @@
 ├── index.html
 ├── research.html
 ├── strategies.html
+├── quant.html
 ├── studio.html
 ├── archive.html
 ├── contact.html

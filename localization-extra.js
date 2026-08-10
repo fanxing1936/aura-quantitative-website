@@ -7,3 +7,18 @@
   function applyExtra(lang){const d=extra[lang]||extra.en;document.querySelectorAll('[data-extra-i18n]').forEach(el=>{if(d[el.dataset.extraI18n])el.textContent=d[el.dataset.extraI18n]});document.querySelectorAll('[data-extra-html]').forEach(el=>{if(d[el.dataset.extraHtml])el.innerHTML=d[el.dataset.extraHtml]});document.querySelectorAll('.navlinks a[href="archive.html"]').forEach(el=>el.textContent=d.atlas);const note=document.querySelector('.scene-note');if(note){const label=note.querySelector('span'),quote=note.querySelector('blockquote');if(label)label.textContent=d.examLabel;if(quote)quote.textContent=d.examQuote}const cabinet=document.querySelector('.cabinet-copy>span');if(cabinet)cabinet.textContent=d.cabinetLabel;const meta=document.querySelectorAll('.contact-meta span');if(meta[0])meta[0].textContent=d.hongKong;if(meta[1])meta[1].textContent=d.globalMandates;document.querySelectorAll('.atlas-index span').forEach((el,i)=>{if(d.atlasCount[i])el.textContent=d.atlasCount[i]});document.querySelectorAll('.atlas-portal>span').forEach((el,i)=>{if(d.atlasLabels[i])el.textContent=d.atlasLabels[i]})}
   document.addEventListener('click',e=>{if(e.target.matches('.lang-switcher button'))setTimeout(()=>applyExtra(e.target.dataset.lang),0)});applyExtra(localStorage.getItem('aura-lang')||'en');
 })();
+
+/* Shared multilingual navigation for the quantitative laboratory. */
+(function(){
+  const labels={en:'Quant Lab','zh-CN':'量化实验室','zh-TW':'量化實驗室'};
+  function sync(lang){
+    document.querySelectorAll('.navlinks').forEach(nav=>{
+      let link=nav.querySelector('[href="quant.html"]');
+      if(!link){link=document.createElement('a');link.href='quant.html';const atlas=nav.querySelector('[href="archive.html"]');atlas?nav.insertBefore(link,atlas):nav.appendChild(link)}
+      link.textContent=labels[lang]||labels.en;
+      if(document.body.classList.contains('quant-page'))link.classList.add('active');
+    });
+  }
+  document.addEventListener('click',e=>{if(e.target.matches('.lang-switcher button'))setTimeout(()=>sync(e.target.dataset.lang),0)});
+  sync(localStorage.getItem('aura-lang')||'en');
+})();

@@ -1,0 +1,77 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>AURA / 01 — Quantitative Laboratory</title>
+  <meta name="description" content="A multilingual quantitative laboratory for market movement, mathematical models and theoretical calculations.">
+  <link rel="icon" type="image/png" href="public/brand/aura-scene-mark-64.png">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body class="subpage quant-page">
+  <nav class="nav inner-nav">
+    <a class="brand" href="index.html"><span>◒</span> AURA / 01</a>
+    <div class="navlinks"><a href="research.html" data-page-i18n="research">Research</a><a href="strategies.html" data-page-i18n="strategies">Strategies</a><a href="studio.html" data-page-i18n="studio">Studio</a><a class="active" href="quant.html" data-lab-nav>Quant Lab</a><a href="archive.html" data-extra-i18n="atlas">Atlas</a></div>
+    <a class="nav-cta" href="contact.html" data-page-i18n="contact">Contact ↗</a>
+  </nav>
+
+  <main>
+    <header class="quant-hero">
+      <img class="quant-hero-art" src="public/art/quant-lab/market-horizon.webp" alt="Classical panoramic market horizon">
+      <div class="quant-hero-copy">
+        <p class="eyebrow" data-quant="heroEyebrow">Systema / live research folio</p>
+        <h1 data-quant-html="heroTitle">Numbers move.<br><em>Theory gives them form.</em></h1>
+        <p data-quant="heroBody">A working field for observing price movement, testing assumptions and translating mathematical structure into disciplined market decisions.</p>
+      </div>
+      <div class="quant-status"><span><i></i><b data-quant="status">Model stream active</b></span><span id="lab-time">UTC+8 / 00:00:00</span><span data-quant="delay">Illustrative delayed data</span></div>
+    </header>
+
+    <section class="quote-ribbon" aria-label="Illustrative stock movement">
+      <div data-symbol="AAPL"><span>AAPL</span><strong>226.41</strong><i>+0.82%</i></div>
+      <div data-symbol="MSFT"><span>MSFT</span><strong>424.73</strong><i>+0.46%</i></div>
+      <div data-symbol="NVDA"><span>NVDA</span><strong>188.92</strong><i>+1.31%</i></div>
+      <div data-symbol="TSLA"><span>TSLA</span><strong>314.08</strong><i>−0.37%</i></div>
+      <div data-symbol="HSI"><span>HSI</span><strong>25,081</strong><i>+0.55%</i></div>
+      <div data-symbol="VIX"><span>VIX</span><strong>17.24</strong><i>−1.08%</i></div>
+    </section>
+
+    <section class="quant-observatory section-pad">
+      <div class="quant-section-head"><div><p class="eyebrow dark" data-quant="observeEyebrow">I / Market observatory</p><h2 data-quant-html="observeTitle">Price is a path,<br><em>not a point.</em></h2></div><p data-quant="observeBody">We read return, dispersion and liquidity together. The aim is not to predict every movement, but to distinguish structure from accident.</p></div>
+      <div class="quant-grid">
+        <article class="quant-card price-path">
+          <header><span data-quant="pathTitle">Normalized equity path</span><b>+18.42%</b></header>
+          <svg viewBox="0 0 720 260" role="img" aria-label="Illustrative normalized equity curve"><g class="grid-lines"><path d="M0 35H720M0 95H720M0 155H720M0 215H720"/></g><path class="area-path" d="M0 220L45 202L92 211L138 170L185 182L232 142L278 157L326 109L372 126L420 82L468 105L514 57L560 72L612 31L660 51L720 18V260H0Z"/><path class="main-path" d="M0 220L45 202L92 211L138 170L185 182L232 142L278 157L326 109L372 126L420 82L468 105L514 57L560 72L612 31L660 51L720 18"/></svg>
+          <footer><span data-quant="return">Annualized return <b>18.42%</b></span><span data-quant="drawdown">Max drawdown <b>−6.20%</b></span><span data-quant="sharpe">Sharpe <b>1.84</b></span></footer>
+        </article>
+        <article class="quant-card volatility-card"><header><span data-quant="volTitle">Volatility cone</span><b>9.76%</b></header><div class="vol-cone"><i style="--x:34%;--y:78%"></i><i style="--x:47%;--y:62%"></i><i style="--x:61%;--y:49%"></i><i style="--x:74%;--y:34%"></i><span>10D</span><span>30D</span><span>60D</span><span>120D</span></div><p data-quant="volBody">Realized volatility remains below its long-run median while breadth expands.</p></article>
+        <figure class="quant-plate observer-plate"><img src="public/art/quant-lab/lakeside-observers.webp" alt="Two classical observers beside a lake"><figcaption data-quant="plateObserve">Plate 01 / Observation before action</figcaption></figure>
+      </div>
+    </section>
+
+    <section class="model-workshop section-pad">
+      <img class="workshop-bg" src="public/art/quant-lab/mountain-village.webp" alt="Mountain village and stone bridge">
+      <div class="quant-section-head"><div><p class="eyebrow dark" data-quant="modelEyebrow">II / Model workshop</p><h2 data-quant-html="modelTitle">Assumptions enter.<br><em>Evidence returns.</em></h2></div><p data-quant="modelBody">Every model is a compact argument about the market. We expose its inputs, uncertainty and failure conditions.</p></div>
+      <div class="model-columns">
+        <article class="formula-card"><small>01 / OPTION THEORY</small><h3 data-quant="bsTitle">Black–Scholes call value</h3><code>C = S₀N(d₁) − Ke<sup>−rT</sup>N(d₂)</code><div class="input-ledger"><span>S₀ <b>100.00</b></span><span>K <b>105.00</b></span><span>σ <b>22.0%</b></span><span>T <b>0.50</b></span></div><output><span data-quant="modelValue">Model value</span><strong id="bs-value">5.18</strong></output></article>
+        <article class="formula-card"><small>02 / PORTFOLIO GEOMETRY</small><h3 data-quant="varianceTitle">Portfolio variance</h3><code>σ²<sub>p</sub> = wᵀΣw</code><div class="matrix" aria-label="Covariance matrix"><span>1.00</span><span>.42</span><span>.18</span><span>.42</span><span>1.00</span><span>.31</span><span>.18</span><span>.31</span><span>1.00</span></div><output><span data-quant="riskBudget">Risk budget used</span><strong>68.4%</strong></output></article>
+        <article class="formula-card dark-formula"><small>03 / BAYESIAN UPDATE</small><h3 data-quant="bayesTitle">Posterior conviction</h3><code>P(θ|D) ∝ P(D|θ)P(θ)</code><div class="posterior"><span data-quant="prior">Prior</span><i><b style="width:42%"></b></i><strong>.42</strong><span data-quant="posterior">Posterior</span><i><b style="width:74%"></b></i><strong>.74</strong></div><output><span data-quant="evidence">Evidence strength</span><strong>+0.32</strong></output></article>
+      </div>
+    </section>
+
+    <section class="factor-field section-pad">
+      <div class="factor-copy"><p class="eyebrow dark" data-quant="factorEyebrow">III / Factor field</p><h2 data-quant-html="factorTitle">Many variables.<br><em>One governed exposure.</em></h2><p data-quant="factorBody">Signals are orthogonalized, cost-adjusted and constrained before they enter a portfolio.</p></div>
+      <div class="factor-map" aria-label="Factor exposure map">
+        <div><span data-quant="momentum">Momentum</span><i><b style="width:82%"></b></i><strong>+.82</strong></div><div><span data-quant="quality">Quality</span><i><b style="width:61%"></b></i><strong>+.61</strong></div><div><span data-quant="value">Value</span><i><b style="width:34%"></b></i><strong>+.34</strong></div><div class="negative"><span data-quant="volatility">Volatility</span><i><b style="width:23%"></b></i><strong>−.23</strong></div><div><span data-quant="liquidity">Liquidity</span><i><b style="width:49%"></b></i><strong>+.49</strong></div>
+      </div>
+      <div class="correlation-table"><header><span data-quant="corrTitle">Cross-asset correlation</span><small>90D</small></header><div class="corr-head"><span></span><span>EQ</span><span>FI</span><span>FX</span><span>CM</span></div><div><b>EQ</b><i data-v="100">1.00</i><i data-v="42">.42</i><i data-v="18">.18</i><i data-v="31">.31</i></div><div><b>FI</b><i data-v="42">.42</i><i data-v="100">1.00</i><i data-v="27">.27</i><i data-v="12">.12</i></div><div><b>FX</b><i data-v="18">.18</i><i data-v="27">.27</i><i data-v="100">1.00</i><i data-v="36">.36</i></div><div><b>CM</b><i data-v="31">.31</i><i data-v="12">.12</i><i data-v="36">.36</i><i data-v="100">1.00</i></div></div>
+      <figure class="quant-plate cliff-plate"><img src="public/art/quant-lab/cliff-house.webp" alt="Classical house on a cliff"><figcaption data-quant="plateRisk">Plate 02 / Risk at the boundary</figcaption></figure>
+    </section>
+
+    <section class="quant-disclaimer"><span>AURA / LABORATORIUM</span><p data-quant="disclaimer">All market figures and calculations are illustrative, delayed and provided for interface demonstration only. They do not constitute investment advice.</p><a href="research.html" data-quant="researchLink">Read the research discipline ↗</a></section>
+  </main>
+
+  <footer><span>AURA / 01</span><span data-quant="footer">Quantitative laboratory · Hong Kong · 2026</span><span data-quant="risk">Research material · Not investment advice</span></footer>
+  <div class="lang-switcher" role="group" aria-label="Language"><button data-lang="en">EN</button><button data-lang="zh-CN">简</button><button data-lang="zh-TW">繁</button></div>
+  <script src="pages.js"></script><script src="localization-extra.js"></script><script src="quant.js"></script>
+</body>
+</html>
